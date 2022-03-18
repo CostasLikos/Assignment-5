@@ -6,37 +6,169 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <link href="css/StyleSheet.css" rel="stylesheet" />
+    <link href="css/StyleSheet.css" rel="stylesheet" /> <!--enhmerwsou mwrh  mlkia-->
 
     <style>
+
+
+
+
+
+
         body {
             background: #ebeced;
             font-family: sans-serif;
         }
-        .hotels-page{
-            width:1050px;
-            margin:0 auto;
-        }
-        .hotels-page .search-and-filter{
-            background-color: #37454d;
-            color: #6c767c;
-        }
-        .hotels-page .search-and-filter .fa{
-            padding:0px 15px;
-        }
-        .hotels-page .search-and-filter .first-row{
-            display:flex;
-            padding:0px 15px;
-            height:45px;
 
+        input:focus, textarea:focus {
+            outline: none !important;
         }
-        .hotels-page .search-and-filter .first-row .first-col{
-            width:85%;
-            background-color:white;
-            display: flex;
+
+        .hotels-page {
+            width: 1050px;
+            margin: 0 auto;
         }
+
+            .hotels-page .search-and-filter {
+                background-color: #37454d;
+                color: #6c767c;
+            }
+
+                .hotels-page .search-and-filter .fa {
+                    padding: 0px 15px;
+                }
+
+                .hotels-page .search-and-filter .first-row {
+                    display: flex;
+                    padding: 0px 15px;
+                    height: 45px;
+                }
+
+                    .hotels-page .search-and-filter .first-row .first-col {
+                        width: 85%;
+                        background-color: white;
+                        display: flex;
+                        align-items: center;
+                        border-top-left-radius: 3px;
+                        border-bottom-left-radius: 3px;
+                    }
+
+                        .hotels-page .search-and-filter .first-row .first-col input {
+                            height: 100%;
+                            width: 100%;
+                            line-height: 30px;
+                        }
+
+                    .hotels-page .search-and-filter .first-row .second-col {
+                        width: 15%;
+                        background-color: #007fad;
+                        border-top-right-radius: 3px;
+                        border-bottom-right-radius: 3px;
+                    }
+
+                        .hotels-page .search-and-filter .first-row .second-col input {
+                            cursor: pointer;
+                            color: #fff;
+                            width: 100%;
+                            height: 100%;
+                        }
+
+                .hotels-page .search-and-filter .second-row {
+                    display: flex;
+                    padding: 5px 10px;
+                    height: 45px;
+                    justify-content: space-between;
+                }
+
+                    .hotels-page .search-and-filter .second-row .col {
+                        width: 32%;
+                        background-color: white;
+                        display: flex;
+                        align-items: center;
+                        border-radius: 2px;
+                    }
+
+                        .hotels-page .search-and-filter .second-row .col input {
+                            width: 100%;
+                            height: 100%;
+                        }
+
+                        .hotels-page .search-and-filter .second-row .col select {
+                            width: 100%;
+                            height: 100%;
+                            cursor: pointer;
+                        }
+
+                    .hotels-page .search-and-filter .second-row .first-col {
+                        border-left: solid #007fad 7px;
+                    }
+
+                    .hotels-page .search-and-filter .second-row .second-col {
+                        border-left: solid #f48f00 7px;
+                    }
+
+
+
+
+                .hotels-page .search-and-filter .third-row {
+                    display: flex;
+                    padding: 10px 10px;
+                    height: 45px;
+                    font-size: 15px;
+                    justify-content: space-between;
+                }
+
+                    .hotels-page .search-and-filter .third-row select {
+                        color: #fff;
+                        width: 100%;
+                        cursor: pointer;
+                    }
+
+                    .hotels-page .search-and-filter .third-row .col {
+                        border-right: solid 1px #d2d2d2;
+                        padding-right: 15px;
+                        min-width: 150px;
+                    }
+
+                        .hotels-page .search-and-filter .third-row .col:last-child {
+                            border: none;
+                        }
+
+                        .hotels-page .search-and-filter .third-row .col .label {
+                            text-align: left;
+                            color: #d2d2d2;
+                        }
+
+                    .hotels-page .search-and-filter .third-row .first-col {
+                        width: 296px;
+                    }
+
+                        .hotels-page .search-and-filter .third-row .first-col .label {
+                            display: flex;
+                            justify-content: space-between;
+                            padding-bottom: 15px;
+                        }
+
+                        .hotels-page .search-and-filter .third-row .first-col input {
+                            width: 100%;
+                            background: #007fad;
+                            -webkit-appearance: none;
+                            height: 5px;
+                            border-radius: 2px;
+                            display: flex;
+                            cursor: pointer;
+                        }
+
+                    .hotels-page .search-and-filter .third-row input[type=range]::-webkit-slider-thumb {
+                        height: 21px;
+                        width: 21px;
+                        border-radius: 50px;
+                        background: #2d2d2d;
+                        cursor: pointer;
+                        -webkit-appearance: none;
+                    }
     </style>
-    <!--12:31-->
+    <!--*53-52*-->
 
 
 
@@ -50,11 +182,11 @@
             <div class="first-row">
                 <div class="first-col">
                     <span class="fa fa-search"></span>
-                    <input type="text" placeholder="Type Here"/>
+                    <input type="text" placeholder="Type Here" />
                 </div>
 
                 <div class="second-col">
-                    <input type="submit" name="Search"/>
+                    <input type="submit" value="Search" />
                 </div>
 
             </div>
@@ -70,9 +202,9 @@
                 <div class="col">
                     <i class="fa fa-users"></i>
                     <select>
-                        <option >Roomi</option>
-                        <option >text</option>
-                        <option >text</option>
+                        <option>Roomi</option>
+                        <option>text</option>
+                        <option>text</option>
                     </select>
                 </div>
 
