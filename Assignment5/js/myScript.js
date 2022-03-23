@@ -46,7 +46,7 @@
         //------------------2 Get All Hotels------------
         hotels = data[1].entries;
         //-------------- 3 Get Hotel Names for Autocomplete--------
-        var HotelNames = hotels.mpa(x => x.hotelName);
+        var HotelNames = hotels.map(x => x.hotelName);
         autocompleteNames = [...new Set(HotelNames)];
         autocompleteNames.sort();
         //------------ 4 Max Price------------
