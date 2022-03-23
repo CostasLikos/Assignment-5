@@ -3,192 +3,24 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <link href="css/StyleSheet.css" rel="stylesheet" /> <!--enhmerwsou mwrh  mlkia-->
-
+    <link href="css/StyleSheet.css" rel="stylesheet" />
     <style>
-
-
-
-
-
-
-        body {
-            background: #ebeced;
-            font-family: sans-serif;
-        }
-
-        input:focus, textarea:focus {
-            outline: none !important;
-        }
-
-        .hotels-page {
-            width: 1050px;
-            margin: 0 auto;
-        }
-
-            .hotels-page .search-and-filter {
-                background-color: #37454d;
-                color: #6c767c;
-            }
-
-                .hotels-page .search-and-filter .fa {
-                    padding: 0px 15px;
-                }
-
-                .hotels-page .search-and-filter .first-row {
-                    display: flex;
-                    padding: 0px 15px;
-                    height: 45px;
-                }
-
-                    .hotels-page .search-and-filter .first-row .first-col {
-                        width: 85%;
-                        background-color: white;
-                        display: flex;
-                        align-items: center;
-                        border-top-left-radius: 3px;
-                        border-bottom-left-radius: 3px;
-                    }
-
-                        .hotels-page .search-and-filter .first-row .first-col input {
-                            height: 100%;
-                            width: 100%;
-                            line-height: 30px;
-                        }
-
-                    .hotels-page .search-and-filter .first-row .second-col {
-                        width: 15%;
-                        background-color: #007fad;
-                        border-top-right-radius: 3px;
-                        border-bottom-right-radius: 3px;
-                    }
-
-                        .hotels-page .search-and-filter .first-row .second-col input {
-                            cursor: pointer;
-                            color: #fff;
-                            width: 100%;
-                            height: 100%;
-                        }
-
-                .hotels-page .search-and-filter .second-row {
-                    display: flex;
-                    padding: 5px 10px;
-                    height: 45px;
-                    justify-content: space-between;
-                }
-
-                    .hotels-page .search-and-filter .second-row .col {
-                        width: 32%;
-                        background-color: white;
-                        display: flex;
-                        align-items: center;
-                        border-radius: 2px;
-                    }
-
-                        .hotels-page .search-and-filter .second-row .col input {
-                            width: 100%;
-                            height: 100%;
-                        }
-
-                        .hotels-page .search-and-filter .second-row .col select {
-                            width: 100%;
-                            height: 100%;
-                            cursor: pointer;
-                        }
-
-                    .hotels-page .search-and-filter .second-row .first-col {
-                        border-left: solid #007fad 7px;
-                    }
-
-                    .hotels-page .search-and-filter .second-row .second-col {
-                        border-left: solid #f48f00 7px;
-                    }
-
-
-
-
-                .hotels-page .search-and-filter .third-row {
-                    display: flex;
-                    padding: 10px 10px;
-                    height: 45px;
-                    font-size: 15px;
-                    justify-content: space-between;
-                }
-
-                    .hotels-page .search-and-filter .third-row select {
-                        color: #fff;
-                        width: 100%;
-                        cursor: pointer;
-                    }
-
-                    .hotels-page .search-and-filter .third-row .col {
-                        border-right: solid 1px #d2d2d2;
-                        padding-right: 15px;
-                        min-width: 150px;
-                    }
-
-                        .hotels-page .search-and-filter .third-row .col:last-child {
-                            border: none;
-                        }
-
-                        .hotels-page .search-and-filter .third-row .col .label {
-                            text-align: left;
-                            color: #d2d2d2;
-                        }
-
-                    .hotels-page .search-and-filter .third-row .first-col {
-                        width: 296px;
-                    }
-
-                        .hotels-page .search-and-filter .third-row .first-col .label {
-                            display: flex;
-                            justify-content: space-between;
-                            padding-bottom: 15px;
-                        }
-
-                        .hotels-page .search-and-filter .third-row .first-col input {
-                            width: 100%;
-                            background: #007fad;
-                            -webkit-appearance: none;
-                            height: 5px;
-                            border-radius: 2px;
-                            display: flex;
-                            cursor: pointer;
-                        }
-
-                    .hotels-page .search-and-filter .third-row input[type=range]::-webkit-slider-thumb {
-                        height: 21px;
-                        width: 21px;
-                        border-radius: 50px;
-                        background: #2d2d2d;
-                        cursor: pointer;
-                        -webkit-appearance: none;
-                    }
     </style>
-    <!--*53-52*-->
-
-
-
-
 </head>
 <body>
     <div class="hotels-page">
-
         <section class="search-and-filter">
-
             <div class="first-row">
                 <div class="first-col">
                     <span class="fa fa-search"></span>
-                    <input type="text" placeholder="Type Here" />
+                    <input id="search-TextField" list="hotelsAuto" type="text" placeholder="Champs,Elysees,Paris" />
+                    <datalist id="hotelsAuto">
+                    </datalist>
                 </div>
-
                 <div class="second-col">
-                    <input type="submit" value="Search" />
+                    <input  type="submit" value="Search" />
                 </div>
-
             </div>
             <div class="second-row">
                 <div class="col first-col">
@@ -199,28 +31,26 @@
                     <i class="fa fa-calendar"></i>
                     <input id="checkOutDate" placeholder="Check-out" />
                 </div>
-                <div class="col">
+                <div class="col ">
                     <i class="fa fa-users"></i>
                     <select>
-                        <option>Roomi</option>
-                        <option>text</option>
-                        <option>text</option>
+                        <option value="ROOM1">ROOM1</option>
+                        <option value="ROOM1">ROOM2</option>
+                        <option value="ROOM1">ROOM3</option>
                     </select>
                 </div>
-
             </div>
             <div class="third-row">
                 <div class="col first-col">
                     <div class="label">
                         <span>Price</span>
-                        <span>max.$6000</span>
-
+                        <span>Max.$6000</span>
                     </div>
                     <input type="range" min="0" max="5000" />
                 </div>
                 <div class="col">
                     <div class="label">
-                        Property type
+                        Property Type
                     </div>
                     <select>
                         <option>⭐</option>
@@ -240,20 +70,16 @@
                         <option>6 - 7 Good</option>
                         <option>7 - 8.5 Very Good</option>
                         <option>8.5 - 10 Excellent</option>
-
                     </select>
                 </div>
                 <div class="col">
                     <div class="label">
-                        Hotel location
+                        Hotel Location
                     </div>
                     <select>
-                        <option>SDF</option>
-                        <option>sdfsdf</option>
-                        <option>SDFSDGSD</option>
-                        <option>SDFSDF</option>
-                        <option>gsdfsdfd</option>
-
+                        <option>Pari</option>
+                        <option>Marseille</option>
+                        <option>Toulouse</option>
                     </select>
                 </div>
                 <div class="col">
@@ -263,20 +89,102 @@
                     <select>
                         <option>Bathroom</option>
                         <option>Beds</option>
-                        <option>asd</option>
-                        <option>asd</option>
-                        <option>asd</option>
-
+                        <option>Bedroom</option>
                     </select>
                 </div>
-
             </div>
-
         </section>
-
+        <section class="map-and-sort">
+            <div class="map">
+                <iframe width="150" height="60" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d83998.94722687619!2d2.277019841665155!3d48.8588377391234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sgr!4v1554987763683!5m2!1sen!2sgr"></iframe>
+            </div>
+            <div class="sorting">
+                <strong>Sort By</strong>
+                <select id="Sort-By-DropDown">
+                    <option value="nameAsc">Hotel Name (Ascending)</option>
+                    <option value="nameDesc">Hotel Name (Descending)</option>
+                    <option value="cityAsc">City (Ascending)</option>
+                    <option value="cityDesc">City (Descending) </option>
+                    <option value="priceAsc">Price (Ascending)</option>
+                    <option value="priceDesc">Price (Descending)</option>
+                </select>
+                <span class="info-icon">i</span>
+            </div>
+        </section>
+        <section id="listing-hotels-sectiion" class="listing-hotels">
+            <div class="hotel-card">
+                <div class="photo" style="background:url('http://comerciodearrecife.com/wp-content/uploads/hotel-prueba-1.jpg'); background-position: center;">
+                    <i class="fa fa-heart"></i>
+                    <span>1/30</span>
+                </div>
+                <div class="details">
+                    <h3>Hotel Lancaster</h3>
+                    <div class="rating" style="display:inline">
+                        <div>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <i>Hotel</i>
+                        </div>
+                    </div>
+                    <div class="location">
+                        Paris,0.2 miles to Chamos Elysees
+                    </div>
+                    <div class="review">
+                        <span class="total">8.8</span>
+                        <b>Excellent</b>
+                        <small>(1736)</small>
+                    </div>
+                    <div class="location-review">
+                        Excellent location <small>(9.2/10)</small>
+                    </div>
+                </div>
+                <div class="third-party-prices">
+                    <div class="sites-and-prices">
+                        <div class="highlited">
+                            Hotel website
+                            <strong>$706</strong>
+                        </div>
+                        <div>
+                            Agoda
+                            <strong>$575</strong>
+                        </div>
+                        <div>
+                            Travelocity
+                            <strong>$708</strong>
+                        </div>
+                    </div>
+                    <div class="more-deals">
+                        <strong>More deals from</strong>
+                        <strong>$575</strong>
+                    </div>
+                </div>
+                <div class="call-to-action">
+                    <div class="price">
+                        <div class="before-discount">
+                            HotelPower.com
+                            <strong><s>$1.568</s></strong>
+                        </div>
+                        <div class="after-discount">
+                            Travelocity
+                            <strong>$1.213</strong>
+                            <div class="total">
+                                3 nights for <strong>$3.638</strong>
+                            </div>
+                            <div class="usp">
+                                <span>Free breakfast</span>
+                            </div>
+                        </div>
+                        <div class="button">
+                            <a href="#">View Deal ></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
-
-
-    <script src="js/myScript.js"></script>
+    <script type="text/javascript" src="js/myScript.js"></script>
 </body>
 </html>
